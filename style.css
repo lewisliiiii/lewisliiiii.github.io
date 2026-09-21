@@ -1,0 +1,252 @@
+:root {
+  /* Beginner note: change these colours to update the whole website palette. */
+  --cream: #f7f4ee;
+  --paper: #fffdf9;
+  --sky: #dfeaf7;
+  --blue: #3e668f;
+  --blue-dark: #213a57;
+  --text: #1d2b36;
+  --muted: #4e6170;
+  --border: #cadef5;
+  --shadow: rgba(33, 58, 87, 0.12);
+
+  /* Beginner note: change these spacing values to make sections tighter or wider. */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: var(--cream);
+  color: var(--text);
+}
+
+a {
+  color: var(--blue-dark);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+}
+
+.skip-link:focus {
+  left: var(--space-2);
+  top: var(--space-2);
+  background: var(--paper);
+  padding: var(--space-2);
+  z-index: 10;
+}
+
+.container {
+  width: min(var(--max-width), calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: rgba(255, 253, 249, 0.95);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 1rem;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--blue-dark);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--blue);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--sky), var(--paper));
+  padding: var(--space-6) 0;
+}
+
+.hero-content {
+  display: grid;
+  place-items: center;
+}
+
+.hero-text {
+  max-width: 700px;
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: var(--space-2);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: var(--blue-dark);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin-bottom: var(--space-2);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: var(--space-3);
+}
+
+.hero p,
+.section p,
+.project-card p,
+.skill-card p {
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: var(--space-4);
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 2px solid transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button.primary {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+.button.secondary {
+  background: transparent;
+  border-color: var(--blue);
+  color: var(--blue-dark);
+}
+
+.button:hover,
+.button:focus-visible {
+  filter: brightness(0.97);
+}
+
+.section {
+  padding: var(--space-6) 0;
+}
+
+.alt-section {
+  background: #edf5fb;
+}
+
+.skills-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card,
+.project-card,
+.contact-box {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px var(--shadow);
+  padding: 1.5rem;
+}
+
+.contact-box {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.site-footer {
+  background: var(--blue-dark);
+  color: #eef7ff;
+  padding: 1.25rem 0;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .main-nav {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 3rem 0;
+  }
+}
