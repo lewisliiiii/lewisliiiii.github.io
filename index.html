@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Personal website for Lewis Li, a Year 4 Applied Computing student at HSUHK."
+      content="Portfolio website for Lewis Li, a Computer Science student and aspiring software developer."
     />
-    <title>Lewis Li | Personal Website</title>
+    <title>Lewis Li | CS Student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -16,139 +22,301 @@
     <header class="site-header">
       <div class="container">
         <nav class="main-nav" aria-label="Main navigation">
-          <a class="brand" href="#top">Lewis Li</a>
+          <a class="brand" href="#top" aria-label="Lewis Li home">
+            <span class="brand-mark">LL</span>
+            <span>Lewis Li</span>
+          </a>
           <div class="nav-links">
             <a href="#about">About</a>
-            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#skills">Skills</a>
           </div>
+          <a class="nav-cta" href="#contact">Let's connect <span aria-hidden="true">↘</span></a>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
-      <section class="hero">
+      <section class="hero" id="top">
+        <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+        <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
         <div class="container hero-content">
           <div class="hero-text">
-            <p class="eyebrow">Year 4 Applied Computing Student</p>
-            <h1>Hi, I’m Lewis Li.</h1>
-            <p>
-              I’m a Year 4 Applied Computing student at HSUHK, and I enjoy building
-              thoughtful digital experiences through learning, practice, and creative problem-solving.
+            <p class="availability"><span class="status-dot"></span> Open to internship and graduate opportunities <span class="availability-divider">·</span> Based in Hong Kong</p>
+            <h1>Lewis Li</h1>
+            <p class="hero-role">Computer Science Student <span>|</span> Aspiring Software Developer</p>
+            <p class="hero-intro">
+              I’m Lewis, a Computer Science student and aspiring software developer
+              with a detail-oriented, quality-focused approach to building reliable
+              digital solutions. I value clean, maintainable code and follow established
+              coding standards.
             </p>
             <div class="hero-actions">
-              <a class="button primary" href="#projects">View my projects</a>
-              <a class="button secondary" href="#contact">Contact me</a>
+              <a class="button primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="#about">More about me <span aria-hidden="true">↓</span></a>
             </div>
+          </div>
+          <div class="profile-card" aria-label="Profile photo placeholder">
+            <div class="profile-ring"></div>
+            <div class="profile-placeholder">
+              <img src="assets/IMG_20220505_011133_250.jpg" alt="Icon for Lewis Li" />
+            </div>
+            <span class="profile-badge">Applied Computing<br />@ HSUHK</span>
+          </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true"><span></span> Scroll to explore</div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container about-grid">
+          <div class="section-heading">
+            <p class="eyebrow">01 / About me</p>
+            <h2>A CS student<br /><span>turning ideas into code.</span></h2>
+          </div>
+          <div class="about-copy">
+            <p class="lead">
+              Detail-oriented. Quality-focused.
+            </p>
+            <p>
+              I’m a Year 4 Applied Computing student at HSUHK and an aspiring software
+              developer building a strong foundation in software design, problem solving,
+              and practical technology projects. I learn by building, refining my coding
+              skills, and following established coding conventions. I apply attention to
+              detail across my work, from understanding requirements and planning solutions
+              to development, testing, and documentation.
+            </p>
+            <a class="inline-link" href="#projects">View my projects <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
 
-      <section id="about" class="section">
-        <div class="container">
-          <h2>About Me</h2>
-          <p>
-            I am a Year 4 Applied Computing student at HSUHK, currently developing my
-            skills in software design, problem solving, and practical technology projects.
-          </p>
-          <p>
-            I enjoy learning by building, whether that means improving my coding skills,
-            exploring new ideas, or finding simple ways to turn concepts into useful results.
-          </p>
-        </div>
-      </section>
-
-      <section id="experience" class="section">
-        <div class="container">
-          <h2>Personal Experience</h2>
-          <article class="experience-card">
-            <h3>IT Intern</h3>
-            <p><strong>ABC company</strong></p>
-            <p><em>June 2026 to August 2026</em></p>
-            <p>
-              I completed a summer internship at ABC company as an IT Intern, where I had the
-              opportunity to learn more about practical IT work and support day-to-day operations.
-            </p>
+      <section id="education" class="section section-muted">
+        <div class="container education-grid">
+          <div class="section-heading">
+            <p class="eyebrow">02 / Education</p>
+            <h2>A strong foundation<br /><span>for what comes next.</span></h2>
+          </div>
+          <article class="education-card">
+            <div class="education-header">
+              <div>
+                <p class="card-kicker">The Hang Seng University of Hong Kong</p>
+                <h3>BSc (Hons) in Applied Computing</h3>
+              </div>
+              <p class="education-date">2022 — 2027<br /><span>Expected</span></p>
+            </div>
+            <div class="education-stats">
+              <div><span>Current cGPA</span><strong>3.60<span>/4.0</span></strong></div>
+              <div><span>Major GPA</span><strong>3.75<span>/4.0</span></strong></div>
+            </div>
+            <div class="education-details">
+              <p><strong>Dean’s List:</strong> 2023/24, 2024/25, and 2025/26</p>
+              <p><strong>Scholarship:</strong> Self-financing Post-secondary Scholarship Scheme — Outstanding Performance Scholarship, 2025/26</p>
+            </div>
           </article>
         </div>
       </section>
 
-      <section id="skills" class="section alt-section">
+      <section id="experience" class="section section-muted">
+        <div class="container experience-grid">
+          <div class="section-heading">
+            <p class="eyebrow">03 / Experience</p>
+            <h2>Applying technology<br /><span>to real-world challenges.</span></h2>
+          </div>
+          <article class="timeline-card">
+            <div class="timeline-date">JUN — AUG 2025</div>
+            <div>
+              <p class="card-kicker">Summer internship</p>
+              <h3>IT Intern <span class="company">@ Conpak Management Consultants Ltd</span></h3>
+              <ul class="experience-list">
+                <li>
+                  <strong>Developed</strong> two Python data-import programs using
+                  <code>pandas</code>, <code>pyodbc</code>, <code>xlwings</code>, and SQL to
+                  transfer Excel records into multiple database tables, improving the
+                  consistency of application data migration.
+                </li>
+                <li>
+                  <strong>Produced</strong> nine comprehensive reports covering timesheet,
+                  income, job evaluation, billing, and client data by leveraging SQL, SSMS,
+                  Multiable ERP, and Excel to support audit, accounting, tax, and management reporting.
+                </li>
+                <li>
+                  <strong>Investigated and resolved</strong> ERP issues involving debit notes,
+                  invoice layouts, timesheet discrepancies, client records, service codes,
+                  and database locks by querying SQL data and coordinating follow-up through
+                  the Mantis issue-tracking system.
+                </li>
+                <li>
+                  <strong>Participated in internal testing</strong> of Conpak’s new NetSuite ERP
+                  system before deployment by executing 20+ test cases, documenting bugs,
+                  logging issues, and following up on 15+ vendor issues through Mantis;
+                  additionally tested 10+ T-Flow cases and prepared corresponding bug reports.
+                </li>
+                <li>
+                  <strong>Supported</strong> 17 users and created 14 staff accounts across ERP
+                  and related business systems while configuring printers and network drives,
+                  checking remote-access and security software, and preparing technical
+                  documentation for NetSuite, remote desktop, fax, and onboarding procedures.
+                </li>
+              </ul>
+              <div class="experience-skills" aria-label="Internship skills">
+                <span>Python</span>
+                <span>MS SQL</span>
+                <span>IT Support</span>
+                <span>Troubleshooting</span>
+                <span>Problem-solving</span>
+                <span>Vendor Communication</span>
+                <span>Software Testing</span>
+                <span>Technical Documentation</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section section-muted">
         <div class="container">
-          <h2>Skills and Interests</h2>
-          <div class="skills-grid" aria-label="Skills and interests list">
-            <article class="skill-card">
-              <h3>Programming</h3>
-              <p>
-                I enjoy learning programming concepts, writing clean solutions, and exploring
-                how technology can solve everyday problems.
-              </p>
+          <div class="section-heading projects-heading">
+            <div>
+              <p class="eyebrow">04 / Selected work</p>
+              <h2>Ideas, built<br /><span>with intent.</span></h2>
+            </div>
+            <div class="projects-intro">
+              <p class="heading-note">A selection of software projects that demonstrate my experience with application development, system design, and user-focused problem solving.</p>
+              <a class="inline-link" href="https://github.com/lewisliiiii" target="_blank" rel="noreferrer">View my GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="projects-grid">
+            <article class="project-card project-featured">
+              <div class="project-number">01</div>
+              <div class="project-media" aria-label="Project image placeholders">
+                <img src="assets/smart-home-dashboard.jpg" alt="Smart Home Application dashboard showing home sensors and room status" />
+                <img src="assets/smart-home-remote-control.jpg" alt="Smart Home Application remote control panel for fan, projector, and camera" />
+                <img src="assets/smart-home-fan-control.jpg" alt="Smart Home Application fan control screen showing automatic, on, and off modes" />
+                <img src="assets/smart-home-control.jpg" alt="Smart Home Application control screen for temperature, humidity, and lighting" />
+                <img src="assets/smart-home-analytics.jpg" alt="Smart Home Application sensor analytics screen" />
+              </div>
+              <div class="project-content">
+                <p class="card-kicker">Final-year project</p>
+                <h3>Smart Home Application</h3>
+                <p>Developed the Python backend and MySQL database on a Raspberry Pi 5 for a cross-platform smart-home web application, with responsive layouts for phones and computers. Implemented automatic light and fan control based on brightness and temperature, and used IR receivers, transmitters, and Arduino components to demonstrate control of home devices such as a projector and camera. Applied UI/UX principles by using familiar icons and clear visual controls to reduce text-heavy instructions and make device actions easier to understand at a glance.</p>
+                <div class="project-tags-group">
+                  <div class="project-tag-row">
+                    <span class="project-tag-label">Technologies</span>
+                    <div class="project-tags"><span>Python</span><span>MySQL</span><span>Raspberry Pi 5</span><span>Arduino</span><span>JavaScript</span></div>
+                  </div>
+                  <div class="project-tag-row">
+                    <span class="project-tag-label">Capabilities</span>
+                    <div class="project-tags"><span>Teamwork</span><span>Problem-solving</span><span>Self-directed learning</span><span>Testing</span><span>Debugging</span></div>
+                  </div>
+                </div>
+              </div>
+              <a class="project-arrow" href="#contact" aria-label="Ask about Smart Home Application">↗</a>
             </article>
-
-            <article class="skill-card">
-              <h3>Board Games</h3>
-              <p>
-                I like strategic thinking and friendly competition, especially in games that
-                need planning, patience, and careful decisions.
-              </p>
+            <article class="project-card">
+              <div class="project-number">02</div>
+              <div class="project-media" aria-label="Restaurant Table Management System screenshots">
+                <img src="assets/restaurant-table-management.png" alt="Restaurant Table Management System floor plan showing table occupancy, queue assignments, and table settings" />
+              </div>
+              <div class="project-content">
+                <p class="card-kicker">Application Development</p>
+                <h3>Restaurant Table Management System</h3>
+                <p>Developed a Java desktop application with a structured UI, SQLite persistence, and JDBC for managing restaurant seating operations. Applied MVC, OOP, and the Software Development Life Cycle with supporting documentation. Customers can join a queue and receive a call number, while staff can assign them to tables, monitor Vacant, Occupied, and Setting Up statuses, and split or combine tables to accommodate different party sizes.</p>
+                <div class="project-tags"><span>Java</span><span>SQLite</span><span>JDBC</span><span>MVC</span><span>OOP</span><span>SDLC</span><span>Documentation</span></div>
+              </div>
+              <a class="project-arrow" href="#contact" aria-label="Ask about Restaurant Table Management System">↗</a>
             </article>
-
-            <article class="skill-card">
-              <h3>Travelling</h3>
-              <p>
-                Exploring new places helps me gain new perspectives, enjoy different cultures,
-                and recharge with fresh experiences.
-              </p>
+            <article class="project-card">
+              <div class="project-number">03</div>
+              <div class="project-media" aria-label="Project image placeholders">
+                <img src="assets/library-home.png" alt="Library self-study rooms booking system home screen" />
+                <img src="assets/library-room-list.png" alt="Library booking system room list with equipment details" />
+                <img src="assets/library-equipment-filter.png" alt="Library booking system room equipment filter" />
+                <img src="assets/library-room-slots.png" alt="Library booking system room and time slot selection screen" />
+                <img src="assets/library-calendar.png" alt="Library booking system calendar and time slot selection" />
+                <img src="assets/library-selected-slots.png" alt="Library booking system selected time slots and daily booking limit" />
+                <img src="assets/library-confirmed.png" alt="Library booking system booking confirmation message" />
+                <img src="assets/library-limit-warning.png" alt="Library booking system daily booking limit warning" />
+                <img src="assets/library-booking-history.png" alt="Library booking system booking history screen" />
+                <img src="assets/library-history-filter.png" alt="Library booking system booking history date filter" />
+              </div>
+              <div class="project-content">
+                <p class="card-kicker">UX Design Prototype</p>
+                <h3>Library Study Room Booking System</h3>
+                <p>Designed a UX prototype using Figma Make based on a realistic HSUHK Library scenario, allowing students to discover and reserve self-study rooms, filter spaces by equipment, cancel bookings, review booking history, and check library opening status. Defined the student-centered assumptions, requirements, and user flows. The design fulfills Don Norman’s design principles by providing clear, predictable, and easy-to-use booking interactions.</p>
+                <a class="project-link project-link-featured" href="https://maker-hungry-37190027.figma.site" target="_blank" rel="noreferrer">Open interactive prototype <span aria-hidden="true">↗</span></a>
+                <div class="project-tags"><span>Figma Make</span><span>UI/UX Design</span><span>User-flow Design</span><span>Requirements Analysis</span><span>Prompt Engineering</span></div>
+              </div>
+              <a class="project-arrow" href="#contact" aria-label="Ask about Library Study Room Booking System">↗</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="section">
+      <section id="skills" class="section">
         <div class="container">
-          <h2>Projects</h2>
-          <div class="projects-grid">
-            <article class="project-card">
-              <h3>Project One</h3>
-              <p>
-                A sample project card for your first idea. Replace the title and description
-                with your own work later.
-              </p>
-            </article>
-
-            <article class="project-card">
-              <h3>Project Two</h3>
-              <p>
-                Another placeholder card. You can describe a class assignment, personal project,
-                or prototype here.
-              </p>
-            </article>
-
-            <article class="project-card">
-              <h3>Project Three</h3>
-              <p>
-                Add details about your latest work, a design concept, or a solution you built.
-              </p>
-            </article>
+          <div class="toolkit-layout">
+            <div class="section-heading">
+              <p class="eyebrow">05 / Toolkit</p>
+              <h2>Tools I use to<br /><span>make things work.</span></h2>
+            </div>
+            <div class="skills-layout">
+              <div class="skill-group">
+                <p class="skill-group-title">Technical skills</p>
+                <div class="skills-list" aria-label="Technical skills">
+                  <div class="skill-row"><strong>Python</strong><em>Intermediate</em></div>
+                  <div class="skill-row"><strong>Java</strong><em>Intermediate</em></div>
+                  <div class="skill-row"><strong>SQL, MySQL, SQLite &amp; JDBC</strong><em>Intermediate</em></div>
+                  <div class="skill-row"><strong>Microsoft 365</strong><em>Intermediate</em></div>
+                  <div class="skill-row"><strong>Git &amp; GitHub</strong><em>Foundational</em></div>
+                </div>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group-title">Professional strengths</p>
+                <div class="skills-list" aria-label="Professional strengths">
+                  <div class="skill-row"><strong>Teamwork</strong></div>
+                  <div class="skill-row"><strong>Problem-solving</strong></div>
+                  <div class="skill-row"><strong>Self-directed learning</strong></div>
+                  <div class="skill-row"><strong>Attention to detail</strong></div>
+                  <div class="skill-row"><strong>Clear communication</strong></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="contact" class="section contact-section">
         <div class="container contact-box">
-          <h2>Contact</h2>
-          <p>
-            <a href="mailto:s226632@hsu.edu.hk">Email Lewis Li</a>
-          </p>
+          <p class="eyebrow">06 / Start a conversation</p>
+          <h2>Let’s build something<br /><span>meaningful.</span></h2>
+          <p>I’m open to internship and graduate opportunities across various IT positions. If you’re looking for someone who is eager to learn and committed to doing careful, reliable work, I’d be glad to connect.</p>
+          <a class="button primary" href="mailto:limnlewis@gmail.com">Send me an email <span aria-hidden="true">↗</span></a>
+          <div class="social-links">
+            <a href="https://github.com/lewisliiiii" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/limnlewis/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container">
+      <div class="container footer-content">
         <p>© 2026 Lewis Li</p>
+        <p>Focused on quality at every step.</p>
+        <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
       </div>
     </footer>
+    <div class="image-lightbox" role="dialog" aria-modal="true" aria-label="Expanded project image" hidden>
+      <button class="lightbox-close" type="button" aria-label="Close expanded image">×</button>
+      <button class="lightbox-control lightbox-previous" type="button" aria-label="Previous project image">‹</button>
+      <div class="lightbox-content">
+        <img src="" alt="" />
+        <div class="lightbox-thumbnails" aria-label="Project image selection"></div>
+      </div>
+      <button class="lightbox-control lightbox-next" type="button" aria-label="Next project image">›</button>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
