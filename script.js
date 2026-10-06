@@ -66,6 +66,18 @@ projectImages.forEach((image, index) => {
   });
 });
 
+document.querySelectorAll(".project-card").forEach((card) => {
+  const images = card.querySelectorAll(".project-media img");
+  if (images.length <= 3) return;
+
+  const galleryButton = document.createElement("button");
+  galleryButton.type = "button";
+  galleryButton.className = "view-gallery-button";
+  galleryButton.textContent = `View all ${images.length} photos`;
+  galleryButton.addEventListener("click", () => images[0].click());
+  card.querySelector(".project-media").appendChild(galleryButton);
+});
+
 closeButton.addEventListener("click", closeLightbox);
 previousButton.addEventListener("click", () => changeImage(-1));
 nextButton.addEventListener("click", () => changeImage(1));
