@@ -157,6 +157,10 @@ a:focus-visible, button:focus-visible {
   line-height: 1.35;
 }
 
+.availability-main {
+  min-width: 0;
+}
+
 .availability-divider {
   margin: 0 0.55rem;
   color: var(--cyan);
