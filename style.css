@@ -73,6 +73,8 @@ a:focus-visible, button:focus-visible {
   text-decoration: none;
 }
 
+.arrow-symbol { text-decoration: none; }
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -130,11 +132,13 @@ a:focus-visible, button:focus-visible {
 }
 
 .status-dot {
-  display: inline-block;
+  display: block;
   width: 7px;
   height: 7px;
-  flex: 0 0 auto;
-  margin-right: 0.7rem;
+  flex: 0 0 7px;
+  min-width: 7px;
+  min-height: 7px;
+  margin: 0.45em 0.7rem 0 0;
   border-radius: 50%;
   background: var(--cyan);
   box-shadow: 0 0 14px var(--cyan);
@@ -142,8 +146,10 @@ a:focus-visible, button:focus-visible {
 
 .availability {
   display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
   margin: 0 0 1.8rem;
   padding: 0.7rem 1rem;
   border: 1px solid rgba(112, 228, 255, 0.35);
@@ -157,12 +163,15 @@ a:focus-visible, button:focus-visible {
   line-height: 1.35;
 }
 
-.availability-main {
+.availability-main,
+.availability-copy {
+  flex: 1 1 auto;
   min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .availability-divider {
-  margin: 0 0.55rem;
+  margin: 0 0.35rem;
   color: var(--cyan);
 }
 
@@ -191,6 +200,7 @@ h3 { margin: 0; font-size: 1.35rem; }
   font-weight: 700;
   font-size: 0.85rem;
   transition: box-shadow 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+  text-decoration: none;
 }
 .button.primary { color: var(--navy-950); background: var(--blue); }
 .button:hover, .button:focus-visible { transform: translateY(-2px); box-shadow: 0 10px 30px var(--glow); }
@@ -333,14 +343,16 @@ h3 { margin: 0; font-size: 1.35rem; }
 
 @media (max-width: 650px) {
   .container { width: min(var(--max-width), calc(100% - 2rem)); }
+  .site-header { padding-top: max(0.75rem, env(safe-area-inset-top)); }
   .main-nav { min-height: 68px; flex-wrap: wrap; gap: 0.8rem; }
   .nav-links { order: 3; width: 100%; justify-content: space-between; gap: 0.5rem; padding-bottom: 0.8rem; }
-  .nav-cta { display: none; }
+  .nav-cta { display: inline-block; margin-left: auto; font-size: 0.75rem; }
   .hero { min-height: auto; }
-  .hero-content { padding: 6rem 0 7rem; }
+  .hero-content { padding: 2.5rem 0 7rem; }
+  section { scroll-margin-top: 5.5rem; }
   h1 { font-size: clamp(3.2rem, 16vw, 5.3rem); }
-  .hero-actions { align-items: flex-start; flex-direction: column; gap: 1.5rem; }
-  .availability { max-width: 100%; border-radius: 14px; }
+  .hero-actions { align-items: center; flex-direction: row; flex-wrap: wrap; gap: 1rem 1.5rem; }
+  .availability { display: flex; width: 100%; max-width: 100%; justify-content: flex-start; border-radius: 14px; padding: 0.65rem 0.7rem; font-size: 0.85rem; }
   .hero-scroll { display: none; }
   .section { padding: 5.5rem 0; }
   .about-grid, .education-grid, .experience-grid, .toolkit-layout, .skills-layout { grid-template-columns: 1fr; }
